@@ -25,10 +25,17 @@ layout: default
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
+			<ul>
+		  {% for post in site.posts %}
+		    <li>
+		      <a href="{{ post.url }}">{{ post.title }}</a>
+		    </li>
+		  {% endfor %}
+		</ul>
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="portfolio-item.html">Project One</a>
+                    <a href="portfolio-item.html">{{ post.title }}</a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -39,11 +46,11 @@ layout: default
                 <h3>
                     <a href="portfolio-item.html">Project Two</a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p>Let, dipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
         </div>
         <!-- /.row -->
-
+		
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
@@ -121,7 +128,13 @@ layout: default
             </div>
         </div>
         <!-- /.row -->
-
+		<ul>
+		  {% for post in site.posts %}
+		    <li>
+		      <a href="{{ post.url }}">{{ post.title }}</a>
+		    </li>
+		  {% endfor %}
+		</ul>
         <hr>
 
         <!-- Footer -->
@@ -135,7 +148,7 @@ layout: default
 
     </div>
     <!-- /.container -->
-
+	
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
